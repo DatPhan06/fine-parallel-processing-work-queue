@@ -1,0 +1,24 @@
+# Run the below to feed redis some data to comsume.
+
+# Run redis image (has redis client) and start a bash shell in the image
+#    You will need to press <Enter> at the client prompt
+kubectl run -i --tty temp --image redis --command "/bin/sh"
+
+
+# Start the cli 
+redis-cli -h redis
+
+# Save some data under the "job2" key (I had to do 1 by 1)
+rpush job2 "apple"
+rpush job2 "banana"
+rpush job2 "cherry"
+rpush job2 "date"
+rpush job2 "fig"
+rpush job2 "grape"
+rpush job2 "lemon"
+rpush job2 "melon"
+rpush job2 "orange"
+
+# list all elements stored under "job2" key
+lrange job2 0 -1
+
