@@ -118,5 +118,3 @@ kubectl delete svc redis
 ## Conclusion
 
 This demo illustrates how Kubernetes can be used to manage parallel processing of tasks using a Redis work queue. This setup can be adapted for various use cases where task distribution and management are critical.
-
-This README provides a comprehensive guide on how to set up and run a parallel job processing system using Kubernetes and Redis, ensuring clear steps and commands to allow even users unfamiliar with these technologies to follow along easily.
